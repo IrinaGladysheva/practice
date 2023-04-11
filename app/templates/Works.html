@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Works{% endblock %}
+
+
+{% block body %}
+
+
+<div class="gallery">
+    <div class="gallery_item gallery_item_1">
+        <a href="#" class="gallery_link">
+            <img src="{{ url_for('static', filename='css/anxiety.png') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Screaming Face </span>
+                </div>
+        </a>
+    </div>
+
+    <div class="gallery_item gallery_item_2">
+        <a href="#" class="gallery_link">
+             <img src="{{ url_for('static', filename='css/sadness.png') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Russian sadness</span>
+                </div>
+        </a>
+    </div>
+    <div class="gallery_item gallery_item_3">
+        <a href="#" class="gallery_link">
+            <img src="{{ url_for('static', filename='css/mind.jpg') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Trapped inside my mind</span>
+                </div>
+        </a>
+    </div>
+    <div class="gallery_item gallery_item_4">
+        <a href="#" class="gallery_link">
+            <img src="{{ url_for('static', filename='css/loving.png') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Loving</span>
+                </div>
+        </a>
+    </div>
+    <div class="gallery_item gallery_item_5">
+        <a href="#" class="gallery_link">
+            <img src="{{ url_for('static', filename='css/sadness.png') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Russian sadness</span>
+                </div>
+        </a>
+    </div>
+
+    <div class="gallery_item gallery_item_6">
+        <a href="#" class="gallery_link">
+            <img src="{{ url_for('static', filename='css/mind.jpg') }}" class="gallery_image" />
+                <div class="gallery_overlay">
+                    <span>Trapped inside my mind</span>
+                </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

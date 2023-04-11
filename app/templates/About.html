@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+
+{% block body %}
+<div class="About_container">
+    <h1>About</h1>
+    <p class="body_text">
+        Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+        tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+        ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+        diam iaculis velit, is fringille sem nunc vet mi.
+    </p>
+</div>
+
+<div class = "List_of_Works">
+    <h1>List of Works</h1>
+    <ul>
+    <p>
+        {% for works in works %}
+        <li>{{works.name}}</li>
+        {% endfor %}
+    </p>
+    </ul>
+</div>
+{% endblock %}

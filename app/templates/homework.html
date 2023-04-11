@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}My Blog{% endblock %}
+
+
+{% block header %}
+    <div class="IMG_3314"></div>
+    <div class="center">
+        <div class="title">AUSLANDERINA</div>
+        <div class="sub_title">Explorations of life</div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<h1>Works</h1>
+<ul>
+    {% for work in works %}
+        <li>
+          {% if work.price == 0.25 %}
+          <s>{{ work.name }}</s>
+          {% else %}
+          <a href="/works/ {{ work.slug}}"> {{ work.name}}</a>
+          {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Collection{% endblock %}
+
+{% block body %}
+  <h1>{{works.name}}</h1>
+
+  <p>Price: ${{works.price}}</p>
+
+  <footer>
+    <a href="/Works">Back to all works</a>
+  </footer>
+{% endblock %}
