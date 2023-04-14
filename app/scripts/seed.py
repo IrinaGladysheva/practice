@@ -14,7 +14,7 @@ works_data = {
   }
 
 for slug, works in works_data.items():
-    new_work = Works(slug=slug, name=works['name'], price=works['price'], description=["test_description"])
+    new_work = Works(slug=slug, name=works['name'], description=["test_description"], price=works['price'])
     db.session.add(new_work)
 
 db.session.commit()
