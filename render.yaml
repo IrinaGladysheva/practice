@@ -4,4 +4,3 @@ services:
       command: "./build.sh"
     start_command: "/opt/render/project/src/.venv/bin/flask run --host=0.0.0.0 
 --port=10000"
-This ensures that you're using the correct Flask executable from the virtual 
