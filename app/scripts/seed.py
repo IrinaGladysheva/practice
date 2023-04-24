@@ -7,7 +7,7 @@ if __name__ == '__main__':
   app.app_context().push()
 
 works_data = {
-    'screaming' : {'name': 'Screaming Face', 'price': 1.50},
+    'screaming1' : {'name': 'Screaming Face', 'price': 1.50},
     'sadness' : {'name': 'Russian sadness', 'price': 1.00},
     'mind' : {'name': 'Trapped inside my mind', 'price': 0.75},
     'loving' : {'name': 'Loving', 'price': 0.50},

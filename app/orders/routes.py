@@ -92,7 +92,23 @@ def all_works():
     all_works = Works.query.all()
     return render_template('Works.html', works=all_works)
 
-@orders_blueprint.route('/works/<slug>')
+@orders_blueprint.route('/works/<slug>', methods=['GET', 'POST'])
 def works(slug):
     works = Works.query.filter_by(slug=slug).first()
+    if request.method == 'POST':
+        if 'Update' in request.form:
+            works.name = request.form['title']
+            works.description = request.form['description']
+            works.price = request.form['price']
+            db.session.commit()
+            flash('Work updated successfully', category='success')
+            return redirect(url_for('orders.all_works'))
+
+        elif 'Delete' in request.form:
+            db.session.delete(works)
+            db.session.commit()
+            flash('Work deleted successfully', category='success')
+            return redirect(url_for('orders.all_works'))
+
     return render_template('show.html', works=works)
+
