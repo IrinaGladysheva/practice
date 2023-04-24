@@ -1,7 +1,7 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
+const password = document.getElementById('password1');
 const password2 = document.getElementById('password2');
 
 form.addEventListener('submit', e => {
@@ -39,34 +39,47 @@ const validateInputs = () => {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
 
+    let allInputsValid = true;
+
     if(usernameValue === '') {
         setError(username, 'Username is required');
+        allInputsValid = false;
     } else {
         setSuccess(username);
     }
 
     if(emailValue === '') {
         setError(email, 'Email is required');
+        allInputsValid = false;
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
+        allInputsValid = false;
     } else {
         setSuccess(email);
     }
 
     if(passwordValue === '') {
         setError(password, 'Password is required');
+        allInputsValid = false;
     } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
+        setError(password, 'Password must be at least 8 character.');
+        allInputsValid = false;
     } else {
         setSuccess(password);
     }
 
     if(password2Value === '') {
         setError(password2, 'Please confirm your password');
+        allInputsValid = false;
     } else if (password2Value !== passwordValue) {
         setError(password2, "Passwords doesn't match");
+        allInputsValid = false;
     } else {
         setSuccess(password2);
     }
 
+    if (allInputsValid) {
+        form.submit();
+    }
 };
+

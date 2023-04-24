@@ -404,8 +404,19 @@ button:hover {
     background-color: #23b4b4;
 }
 
-/* Register Page CSS */
 
+/* Register Page and Login Page CSS */
+
+.container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
 #form {
     width: 300px;
@@ -466,4 +477,40 @@ button:hover {
     color: #ff3860;
     font-size: 9px;
     height: 13px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #38cece;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.flash-container {
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+.alert {
+    margin: 0;
+    border-radius: 0;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
 }
