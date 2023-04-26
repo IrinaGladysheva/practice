@@ -21,10 +21,9 @@
     <div class="list_works">
     <h1>List of Works</h1>
     <ul>
-    <p>
         {% for works in works %}
         <li class="work_item">
-            <form id="form" action="{{ url_for('orders.works', slug=works.slug) }}" method="POST">
+            <form action="{{ url_for('orders.works', slug=works.slug) }}" method="POST">
                 {{works.name}}
                 <p>{{works.description}}</p>
                 <p>price: {{works.price}}$</p>
@@ -32,7 +31,6 @@
             </form>
         </li>
         {% endfor %}
-    </p>
     </ul>
     </div>
 

@@ -109,12 +109,6 @@ nav .menu{
     translation: all 0.3s ease;
 }
 
-.body_text{
-    color: #333333;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
 
 
 .body{
@@ -124,44 +118,6 @@ nav .menu{
     margin: 0;
 
 }
-
-
-.About_container{
-    width: 100vw;
-    height: 70vh;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 8vw 10vw;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-
-
-.List_of_Works {
-    width: 100vw;
-    height: 100vh;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 8vw 10vw;
-    border-radius: 5px;
-    border-radius: 5px;
-    font-weight: 500;
-    margin-bottom: 20rem;
-}
-
-.body_text{
-    color: #333333;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
 
 *,
 *: before,
@@ -361,7 +317,7 @@ body {
 
 .About_container{
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     color: #333333;
     display: flex;
     flex-direction: column;
@@ -370,8 +326,16 @@ body {
     padding: 8vw 10vw;
     border-radius: 5px;
     font-weight: 500;
-    margin-bottom: 300px;
+    margin-bottom: 20px;
 }
+
+
+.body_text{
+    color: #333333;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
 
 .edit_work {
     background-color: white;
@@ -662,11 +626,27 @@ body {
 .alert {
     margin: 0;
     border-radius: 0;
+    padding: 10px 20px; /* Add padding for better readability */
+    font-size: 16px; /* Adjust the font size */
+    opacity: 0.9; /* Make the message slightly transparent */
+    transition: opacity 0.3s ease-in-out;
 }
+
+.alert-danger {
+    background-color: #ff3860;
+    color: #fff;
+}
+
+.alert-success {
+    background-color: #00ffff;
+    color: #fff;
+}
+
 
 .alert-dismissible .close {
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
+    font-size: 18px;
 }
