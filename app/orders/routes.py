@@ -102,13 +102,13 @@ def works(slug):
             works.price = request.form['price']
             db.session.commit()
             flash('Work updated successfully', category='success')
-            return redirect(url_for('orders.all_works'))
+            return redirect(url_for('orders.about'))
 
         elif 'Delete' in request.form:
             db.session.delete(works)
             db.session.commit()
             flash('Work deleted successfully', category='success')
-            return redirect(url_for('orders.all_works'))
+            return redirect(url_for('orders.about'))
 
     return render_template('show.html', works=works)
 

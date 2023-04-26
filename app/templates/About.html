@@ -4,6 +4,9 @@
 
 
 {% block body %}
+
+<div class="about_page">
+
 <div class="About_container">
     <h1>About</h1>
     <p class="body_text">
@@ -15,19 +18,25 @@
 </div>
 
 <div class = "List_of_Works">
+    <div class="list_works">
     <h1>List of Works</h1>
     <ul>
     <p>
         {% for works in works %}
-        <form id="form" action="{{ url_for('orders.works', slug=works.slug) }}" method="POST">
-        <li>{{works.name}}</li>
-        <p>{{works.description}}</p>
-        <p>price: {{works.price}}$</p>
-        <button type="submit">Change</button>
-        </form>
+        <li class="work_item">
+            <form id="form" action="{{ url_for('orders.works', slug=works.slug) }}" method="POST">
+                {{works.name}}
+                <p>{{works.description}}</p>
+                <p>price: {{works.price}}$</p>
+                <button type="submit">Change</button>
+            </form>
+        </li>
         {% endfor %}
     </p>
     </ul>
+    </div>
+
+    <div class="submit_your_works">
     <h1>Submit Your Works</h1>
     <form action="/about", method="POST">
         <label for="title">Title</label><br>
@@ -41,6 +50,8 @@
 
         <button type="submit">Submit</button>
     </form>
+    </div>
+</div>
 </div>
 {% endblock %}
 

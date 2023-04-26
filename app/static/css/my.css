@@ -109,20 +109,6 @@ nav .menu{
     translation: all 0.3s ease;
 }
 
-
-.About_container{
-    width: 100vw;
-    height: 100vh;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 8vw 10vw;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
 .body_text{
     color: #333333;
     font-weight: 500;
@@ -139,11 +125,10 @@ nav .menu{
 
 }
 
-.Another subsection{}
 
 .About_container{
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
     color: #333333;
     display: flex;
     flex-direction: column;
@@ -153,6 +138,8 @@ nav .menu{
     border-radius: 5px;
     font-weight: 500;
 }
+
+
 
 .List_of_Works {
     width: 100vw;
@@ -369,19 +356,55 @@ body {
 
 }
 
-form {
-    background-color: white;
-    padding: 2rem;
-    max-width: 80%; /* Adjust this value to set the desired width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* About Page */
+
+.About_container{
+    width: 100vw;
+    height: 100vh;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 8vw 10vw;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-bottom: 300px;
 }
 
-label {
+.edit_work {
+    background-color: white;
+    padding: 2rem;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.edit_work h1 {
+    color: #0f2027;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.edit_work label {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-input, textarea {
+.edit_work input, .edit_work textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -390,7 +413,7 @@ input, textarea {
     border-radius: 3px;
 }
 
-button {
+.edit_work button {
     background-color: #38cece;
     color: white;
     padding: 0.75rem 1.5rem;
@@ -398,14 +421,147 @@ button {
     border-radius: 3px;
     cursor: pointer;
     font-size: 1rem;
+    margin-right: 10px;
 }
 
-button:hover {
+.edit_work button:hover {
     background-color: #23b4b4;
 }
 
 
-/* Register Page and Login Page CSS */
+
+.list_works {
+    background-color: white;
+    padding: 2rem;
+    width: 80%;
+    max-width: 1200px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.list_works h1 {
+    color: #0f2027;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.work_item {
+    background-color: #f0ffff;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list_works ul li.work_item {
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.list_works ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.list_works ul p {
+    margin-bottom: 20px;
+    text-indent: 20px;
+    text-align: center;
+}
+
+.list_works button {
+    padding: 0.75rem 1.5rem;
+    color: white;
+    background-color: #38cece;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list_works button:hover {
+    background-color: #23b4b4;
+}
+
+
+.submit_your_works {
+    background-color: white;
+    padding: 2rem;
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit_your_works h1 {
+    color: #0f2027;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.submit_your_works label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.submit_your_works input, .submit_your_works textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.submit_your_works button {
+    background-color: #38cece;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit_your_works button:hover {
+    background-color: #23b4b4;
+}
+
+
+/* Register Page and Login Page */
 
 .container {
   position: absolute;
@@ -418,7 +574,7 @@ button:hover {
   box-sizing: border-box;
 }
 
-#form {
+.login_register_form {
     width: 300px;
     margin: 20vh auto 0 auto;
     padding: 20px;
@@ -427,13 +583,13 @@ button:hover {
     font-size: 12px;
 }
 
-#form h1 {
+.login_register_form h1 {
     color: #0f2027;
     text-align: center;
     margin-top: 30px;
 }
 
-#form button {
+.login_register_form button {
     padding: 10px;
     margin-top: 10px;
     width: 100%;
@@ -443,7 +599,7 @@ button:hover {
     border-radius: 4px;
 }
 
-#form button:hover {
+.login_register_form button:hover {
     background-color: #23b4b4;
 }
 
